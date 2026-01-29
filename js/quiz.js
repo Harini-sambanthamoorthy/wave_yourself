@@ -1,143 +1,121 @@
 const questions = [
     {
-        q: "What is the typical frequency range for Terrestrial Microwave transmission?",
+        q: "Which frequency range is generally used for Terrestrial Microwave communication?",
         options: {
-            a: "100 MHz - 500 MHz",
-            b: "4 GHz - 23 GHz",
-            c: "300 GHz - 400 THz",
-            d: "1 THz - 10 THz"
+            a: "300 kHz – 3 MHz",
+            b: "3 GHz – 30 GHz",
+            c: "30 MHz – 300 MHz",
+            d: "300 GHz – 400 THz"
         },
         correct: "b",
-        feedback: "Correct! Terrestrial microwaves typically operate in the 4-6 GHz and 21-23 GHz bands."
+        feedback: "Correct! Terrestrial microwave systems operate mainly in the 3 GHz to 30 GHz range."
     },
     {
-        q: "Which characteristic makes Infrared ideal for secure indoor communication?",
+        q: "Why is line-of-sight (LoS) required in microwave communication?",
         options: {
-            a: "It can pass through concrete walls",
-            b: "It is unaffected by sunlight",
-            c: "It cannot penetrate walls",
-            d: "It has low bandwidth"
+            a: "Microwaves travel slower in air",
+            b: "Microwaves cannot diffract effectively around large obstacles",
+            c: "Microwaves only travel in straight cables",
+            d: "Microwaves are absorbed by copper"
+        },
+        correct: "b",
+        feedback: "Correct! Microwaves do not bend much around obstacles, so a clear path is required."
+    },
+    {
+        q: "Which of the following is a major disadvantage of microwave communication?",
+        options: {
+            a: "Very low data rate",
+            b: "High installation cost of cables",
+            c: "Susceptibility to weather conditions like rain and fog",
+            d: "Cannot transmit digital signals"
         },
         correct: "c",
-        feedback: "Exactly. IR is confined to a single room because it cannot penetrate opaque walls, preventing eavesdropping."
+        feedback: "Correct! Rain and atmospheric conditions can attenuate microwave signals."
     },
     {
-        q: "What is the typical operational life of a communication satellite before replacement is needed?",
+        q: "Which device is used to focus microwave signals into a narrow beam?",
         options: {
-            a: "50-60 years",
-            b: "1-2 years",
-            c: "12-15 years",
-            d: "5-10 years"
+            a: "Dipole antenna",
+            b: "Parabolic dish antenna",
+            c: "Loop antenna",
+            d: "Yagi antenna"
+        },
+        correct: "b",
+        feedback: "Correct! Parabolic dish antennas are used to highly focus microwave beams."
+    },
+    {
+        q: "Which frequency range corresponds to Infrared (IR) waves?",
+        options: {
+            a: "3 kHz – 3 MHz",
+            b: "3 MHz – 3 GHz",
+            c: "300 GHz – 400 THz",
+            d: "3 GHz – 30 GHz"
         },
         correct: "c",
-        feedback: "Right. Satellites generally have a mission life of 12-15 years due to fuel and component degradation."
+        feedback: "Correct! Infrared lies roughly between 300 GHz and 400 THz."
     },
     {
-        q: "In Microwave transmission, what does 'Line-of-Sight' (LoS) imply?",
+        q: "Why is infrared communication mainly used for short-range indoor applications?",
         options: {
-            a: "Antennas must be connected by a wire",
-            b: "Antennas must have a clear, unobstructed path between them",
-            c: "The signal follows the curvature of the earth automatically",
-            d: "The transmission only works underwater"
+            a: "It has very low speed",
+            b: "It cannot penetrate walls and is affected by sunlight",
+            c: "It requires very large antennas",
+            d: "It works only in vacuum"
         },
         correct: "b",
-        feedback: "Correct. Microwaves don't easily diffract around large obstacles, requiring a clear sight path."
+        feedback: "Correct! IR cannot pass through walls and sunlight causes interference."
     },
     {
-        q: "What is the maximum typical bandwidth supported by Terrestrial Microwave links?",
+        q: "Which of the following is a common application of infrared communication?",
         options: {
-            a: "1 Gbps",
-            b: "10 Mbps",
-            c: "100 Kbps",
-            d: "100 Gbps"
+            a: "FM radio broadcasting",
+            b: "TV remote control",
+            c: "Satellite communication",
+            d: "GPS navigation"
         },
         correct: "b",
-        feedback: "Correct. As per standard terrestrial microwave characteristics, bandwidth is typically limited to 1-10 Mbps."
+        feedback: "Correct! TV remotes commonly use infrared communication."
     },
     {
-        q: "Why is Infrared communication unreliable outside of buildings?",
+        q: "Which property of infrared waves makes them suitable for secure communication within a room?",
         options: {
-            a: "Wind blows the signal away",
-            b: "Interference from sun rays",
-            c: "Rain causes the signal to speed up",
-            d: "Oxygen absorbs IR energy instantly"
-        },
-        correct: "b",
-        feedback: "Correct. Solar radiation contains significant IR energy which interferes with modulated IR signals outdoors."
-    },
-    {
-        q: "Which frequency range defines the start of the Infrared spectrum?",
-        options: {
-            a: "1 GHz",
-            b: "300 GHz",
-            c: "400 THz",
-            d: "2.4 GHz"
-        },
-        correct: "b",
-        feedback: "Yes. The IR spectrum typically begins at 300 GHz, transitioning from the Microwave/Terahertz regime."
-    },
-    {
-        q: "What is an advantage of Terrestrial Microwave over cable systems?",
-        options: {
-            a: "It is cheaper to install and requires no land acquisition for cables",
-            b: "It has unlimited bandwidth",
-            c: "It is unaffected by weather conditions",
-            d: "It can penetrate solid mountains"
-        },
-        correct: "a",
-        feedback: "Correct. Microwave links are often used because they bypass the need for physical cable trenches and land rights."
-    },
-    {
-        q: "What is a major disadvantage of Terrestrial Microwaves?",
-        options: {
-            a: "High latency compared to fiber",
-            b: "Susceptibility to weather conditions and eavesdropping",
-            c: "Requires massive cooling systems",
-            d: "Cannot send digital data"
-        },
-        correct: "b",
-        feedback: "Right. Adverse weather can attenuate the signal, and the open-air broadcast is vulnerable to eavesdropping."
-    },
-    {
-        q: "In a satellite link, what happens to the signal received from the earth station?",
-        options: {
-            a: "It is stored for 12-15 years",
-            b: "It is reflected without any change",
-            c: "It is amplified and retransmitted to another earth station",
-            d: "It is converted into infrared waves instantly"
+            a: "High penetration power",
+            b: "Ability to travel through concrete",
+            c: "Inability to penetrate opaque walls",
+            d: "Very low frequency"
         },
         correct: "c",
-        feedback: "Correct. The satellite acts as an active relay that amplifies and retransmits the Up link signal."
+        feedback: "Correct! IR cannot penetrate walls, so signals stay confined to one room."
     },
     {
-        q: "What characteristic of IR waves allows them to be used safely in adjacent rooms without interference?",
+        q: "In microwave communication, increasing the height of antennas mainly helps to:",
         options: {
-            a: "They penetrate through walls easily",
-            b: "They are narrowly focused lasers",
-            c: "They cannot penetrate opaque walls",
-            d: "They only travel in copper wires"
+            a: "Increase the signal frequency",
+            b: "Reduce the effect of noise inside cables",
+            c: "Extend the line-of-sight distance",
+            d: "Reduce power consumption"
         },
         correct: "c",
-        feedback: "Correct. Because IR doesn't penetrate walls, communication in one room is isolated and secure from the next."
+        feedback: "Correct! Taller towers increase the visible horizon and transmission range."
     },
     {
-        q: "Terrestrial microwave links are particularly useful for communication over which of these?",
+        q: "Which of the following statements is TRUE about microwave communication?",
         options: {
-            a: "Long distances across oceans",
-            b: "Difficult terrains like mountains and forests",
-            c: "Short distances through dense fog only",
-            d: "Communication with deep-sea submarines"
+            a: "It does not support high data rates",
+            b: "It requires physical cables between stations",
+            c: "It can carry high-capacity digital data over long distances using repeaters",
+            d: "It works only for underwater communication"
         },
-        correct: "b",
-        feedback: "Exactly. Microwaves provide an easy solution for terrain where laying cables is physically difficult."
+        correct: "c",
+        feedback: "Correct! Microwave links can carry high-speed digital data using repeater stations."
     }
 ];
 
 let currentQuestion = 0;
 let score = 0;
+let answered = false;
 
 function initQuiz() {
-    const quizContent = document.getElementById('quizContent');
     renderQuestion();
 }
 
@@ -148,37 +126,68 @@ function renderQuestion() {
     const progress = (currentQuestion / questions.length) * 100;
     document.getElementById('progressFill').style.width = `${progress}%`;
 
+    answered = false;
+
     quizContent.innerHTML = `
         <div class="card workbench-card active">
             <div class="hud-label" style="margin-bottom: 1rem;">Question ${currentQuestion + 1} of ${questions.length}</div>
             <h2 style="color: var(--primary-cyan);">${qData.q}</h2>
             <div class="options">
                 ${Object.entries(qData.options).map(([key, val]) => `
-                    <button class="option-btn" onclick="handleAnswer('${key}')">
+                    <button class="option-btn" data-key="${key}" onclick="handleAnswer('${key}')">
                         <strong>${key.toUpperCase()}:</strong> ${val}
                     </button>
                 `).join('')}
             </div>
+            <div id="feedbackBox" style="margin-top:1.5rem; font-weight:600;"></div>
         </div>
     `;
 }
 
 window.handleAnswer = function (selected) {
+    if (answered) return;
+    answered = true;
+
     const qData = questions[currentQuestion];
+    const buttons = document.querySelectorAll('.option-btn');
+    const feedbackBox = document.getElementById("feedbackBox");
+
+    buttons.forEach(btn => {
+        const key = btn.getAttribute("data-key");
+        btn.classList.add("disabled");
+
+        if (key === qData.correct) {
+            btn.classList.add("correct");
+        }
+
+        if (key === selected && selected !== qData.correct) {
+            btn.classList.add("wrong");
+        }
+    });
+
     if (selected === qData.correct) {
         score++;
+        feedbackBox.style.color = "#22c55e";
+        feedbackBox.innerText = "✔ " + qData.feedback;
+    } else {
+        feedbackBox.style.color = "#f472b6";
+        feedbackBox.innerText = "✖ " + qData.feedback;
     }
 
-    currentQuestion++;
-    if (currentQuestion < questions.length) {
-        renderQuestion();
-    } else {
-        showResults();
-    }
+    // Wait so user can read explanation
+    setTimeout(() => {
+        currentQuestion++;
+        if (currentQuestion < questions.length) {
+            renderQuestion();
+        } else {
+            showResults();
+        }
+    }, 1800);
 }
 
 function showResults() {
     document.getElementById('progressFill').style.width = `100%`;
+
     const quizContent = document.getElementById('quizContent');
     const resultArea = document.getElementById('resultArea');
     const feedbackTitle = document.getElementById('feedbackTitle');
@@ -196,11 +205,15 @@ function showResults() {
     feedbackText.innerHTML = `
         <div class="score-display">
             <div class="score-circle">${percentage}%</div>
-            <p style="font-size: 1.2rem; margin-bottom: 1rem;">You answered ${score} out of ${questions.length} questions correctly.</p>
-            <p class="scen-text">${percentage >= 70 ?
-            "Excellent work, Engineer! You have mastered the core concepts of fixed-link and short-range wireless systems." :
-            "Review the Theory and Engineering Lab sections to strengthen your knowledge of frequency regimes and propagation."
-        }</p>
+            <p style="font-size: 1.2rem; margin-bottom: 1rem;">
+                You answered ${score} out of ${questions.length} questions correctly.
+            </p>
+            <p class="scen-text">
+                ${percentage >= 70 ?
+                    "Excellent work, Engineer! You have mastered the core concepts of microwave and infrared systems." :
+                    "Review the Theory and Engineering Lab sections to strengthen your understanding."
+                }
+            </p>
         </div>
     `;
 }

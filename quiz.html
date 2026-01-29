@@ -7,6 +7,7 @@
     <title>Engineering Quiz | WaveLab</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
     <style>
         .quiz-container {
             max-width: 800px;
@@ -46,6 +47,24 @@
             border-color: var(--primary-cyan);
         }
 
+        /* ✅ Correct / Wrong styles */
+        .option-btn.correct {
+            background: rgba(34, 197, 94, 0.25);
+            border-color: #22c55e;
+            color: #22c55e;
+        }
+
+        .option-btn.wrong {
+            background: rgba(239, 68, 68, 0.25);
+            border-color: #ef4444;
+            color: #ef4444;
+        }
+
+        .option-btn.disabled {
+            pointer-events: none;
+            opacity: 0.9;
+        }
+
         .progress-bar {
             width: 100%;
             height: 6px;
@@ -80,6 +99,15 @@
             margin: 0 auto 2rem;
             color: var(--primary-cyan);
             text-shadow: 0 0 15px rgba(34, 211, 238, 0.5);
+        }
+
+        #feedbackBox {
+            margin-top: 1.5rem;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 1.05rem;
         }
 
         @keyframes slideIn {
@@ -121,9 +149,12 @@
         </div>
 
         <div id="resultArea" class="card workbench-card" style="display: none; margin-top: 2rem;">
-            <div id="feedbackTitle" class="crt-readout" style="border: none; font-size: 1.5rem;">Assessment Complete
+            <div id="feedbackTitle" class="crt-readout" style="border: none; font-size: 1.5rem;">
+                Assessment Complete
             </div>
-            <div id="feedbackText" class="scen-text" style="margin-top: 1rem;">Analyzing your performance...</div>
+            <div id="feedbackText" class="scen-text" style="margin-top: 1rem;">
+                Analyzing your performance...
+            </div>
             <button class="glow-btn" style="margin-top: 1.5rem;" onclick="location.reload()">Reset Quiz</button>
         </div>
     </section>
